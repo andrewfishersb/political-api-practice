@@ -1,4 +1,8 @@
-<h1>Sub Committees</h1>
+{{#if model}}
+  <h1>Sub Committees</h1>
   {{#each model as |sub|}}
     <li>{{sub.name}}</li>
   {{/each}}
+{{else}}
+  <h2>There are no subcommittees</h2>
+{{/if}}

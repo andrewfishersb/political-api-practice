@@ -1,8 +1,19 @@
-{{committee-list model=model.house}}
-<h3>House</h3>
-<ul>
-
-  {{#each model.house as |committee|}}
-    <li>{{#link-to 'house-subcommittee' committee}}{{committee.name}}{{/link-to}}</li>
-  {{/each}}
-</ul>
+<!-- {{committee-list house=model.house senate=model.senate}} -->
+<div class="row">
+  <div class="col-sm-6">
+    <h3>House</h3>
+    <ul>
+      {{#each model.house as |committee|}}
+        <li><a href="#"{{action "goToSub" committee.committee_id}}>{{committee.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    <h3>Senate</h3>
+    <ul>
+      {{#each model.senate as |committee|}}
+        <li><a href="#"{{action "goToSub" committee.committee_id}}>{{committee.name}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
