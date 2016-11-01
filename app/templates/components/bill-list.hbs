@@ -1,0 +1,3 @@
+{{#each model as |bill|}}
+  <a href="" {{action 'showBillInfo' bill.bill_id }}><li>{{bill.short_title}}</li></a>
+{{/each}}

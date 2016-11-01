@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:house-subcommittee', 'Unit | Route | house subcommittee', {
+moduleFor('route:bill-info', 'Unit | Route | bill info', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
