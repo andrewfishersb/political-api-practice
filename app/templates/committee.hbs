@@ -1,0 +1,8 @@
+{{committee-list model=model.house}}
+<h3>House</h3>
+<ul>
+
+  {{#each model.house as |committee|}}
+    <li>{{#link-to 'house-subcommittee' committee}}{{committee.name}}{{/link-to}}</li>
+  {{/each}}
+</ul>
