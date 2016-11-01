@@ -2,13 +2,14 @@
   <h2>{{bill.short_title}}</h2>
   <h3>{{bill.official_title}}</h3>
 <p>
-  Bill by: {{bill.sponsor.first_name}} {{bill.sponsor.last_name}}
+  Bill by: <a href="#" {{action 'showSponsor' bill.sponsor_id}}>{{bill.sponsor.first_name}} {{bill.sponsor.last_name}}</a>
 </p>
 <p>
+
   introduced on: {{bill.introduced_on}}
 </p>
 
 
-  {{bill.sponsor_id}}
+sponsor  {{bill.sponsor_id}}
   <a href={{bill.urls.congress}}>Learn More</a>
 {{/each}}

@@ -1,0 +1,28 @@
+<h1>Legislator Information</h1>
+{{#each legislator as |person|}}
+  <h2>{{person.title}}.  {{person.first_name}} {{person.last_name}} ({{person.party}}-{{person.state}})</h2>
+
+
+  <h3>Personal Information</h3>
+<p>
+  Day of Birth: {{person.birthday}}
+</p>
+<p>
+  District {{person.district}}, {{person.state_name}}
+</p>
+
+In Office: {{person.term_start}} to {{person.term_end}}
+
+<h3>Contact</h3>
+<p>Address: {{person.office}}</p>
+<p>Phone Number: {{person.phone}}</p>
+<p>
+
+</p>
+
+
+
+<a href={{person.website}}>Webpage</a>
+
+
+{{/each}}

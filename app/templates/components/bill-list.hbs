@@ -1,3 +1,7 @@
 {{#each model as |bill|}}
-  <a href="" {{action 'showBillInfo' bill.bill_id }}><li>{{bill.short_title}}</li></a>
+  {{#if bill.short_title}}
+    <a href="" {{action 'showBillInfo' bill.bill_id }}><li>{{bill.short_title}}</li></a>
+  {{else}}
+    <a href="" {{action 'showBillInfo' bill.bill_id }}><li>{{bill.official_title}}</li></a>
+  {{/if}}
 {{/each}}

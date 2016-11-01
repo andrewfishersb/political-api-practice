@@ -1,5 +1,9 @@
 <ul>
-  {{#each model as |legislator|}}
-    <li> {{legislator.first_name}} {{legislator.last_name}}<br>Contact: <a href=  {{legislator.contact_form}}>{{legislator.contact_form}}</a></li>
-  {{/each}}
+  {{#if model}}
+    {{#each model as |legislator|}}
+      <li> {{legislator.first_name}} {{legislator.last_name}}<br>Contact: <a href=  {{legislator.contact_form}}>{{legislator.contact_form}}</a></li>
+    {{/each}}
+  {{else}}
+  <h2>Not a valid Zipcode</h2>
+  {{/if}}
 </ul>
